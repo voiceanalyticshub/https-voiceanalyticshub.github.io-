@@ -212,16 +212,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<section id="case-user-interaction-with-voice-controlled-interfaces" class="level2">
-<h2 class="anchored" data-anchor-id="case-user-interaction-with-voice-controlled-interfaces">Case: User Interaction with Voice-Controlled Interfaces</h2>
-<p>For our comprehensive analysis, we began by extracting the publicly available audio file from <a href="https://www.youtube.com/watch?v=CYvFxs32zvQ">YouTube</a> and converting it into the Waveform audio format. Our investigation is centered on two pivotal aspects of this interaction:</p>
+<section id="unlocking-the-power-of-voice-analytics-understanding-user-frustration" class="level1">
+<h1>Unlocking the Power of Voice Analytics: Understanding User Frustration</h1>
+<p>Welcome to our practical tutorial on voice analytics with R, where we delve into the fascinating world of human-computer interaction. In this tutorial, we will analyze a compelling video featuring a female Scottish user attempting, albeit humorously, to issue a command to Amazon Alexa to play a song on Spotify. This viral video, though amusing, highlights a common frustration many users encounter when trying to communicate effectively with voice-controlled interfaces.</p>
+<p><video src="data/Basic%20Tutorial/video/alexa_video.mp4" class="img-fluid" controls=""><a href="data/Basic%20Tutorial/video/alexa_video.mp4">Video</a></video></p>
+<p>For our comprehensive analysis, we began by extracting the audio file from the previous video and converting it into the Waveform audio format. Our investigation is centered on two pivotal aspects of this interaction:</p>
 <ol type="1">
 <li><p><strong>Speech Formation of the Wakeword “Alexa”</strong></p></li>
 <li><p><strong>Vocal Changes During the Issuance of a Command (“Alexa, play something is cooking in my kitchen on Spotify by Dana”)</strong></p></li>
 </ol>
-<p>To facilitate our analysis, we meticulously edited the voice recordings, retaining only the segments containing the three consecutive wakewords and the two subsequent user commands. It is noteworthy that the third utterance of “Alexa” was not associated with a command but rather followed by a barrage of profanity and abusive language. Consequently, our subsequent sections will delve into the examination of this specific case.</p>
+<p>To facilitate our analysis, we meticulously edited the voice recordings, retaining only the segments containing the three consecutive wakewords and the two subsequent user commands. It is noteworthy that the third utterance of “Alexa” was not associated with a command but rather followed by a barrage of profanity and abusive language. Consequently, our subsequent sections will delve into the examination of this specific case. You can download the files for this example <a href="https://www.dropbox.com/scl/fo/g689dlmuidyhvgycawkw2/h?rlkey=kfhtnwbq4zahu6mt5w5fmklr6&amp;dl=0">here</a>.</p>
 <p>Our analytical approach primarily leverages the renowned <code>seewave</code> package, which has emerged as the gold standard in R-sound analysis. This versatile package encompasses an impressive array of 130 functions designed for the analysis, manipulation, representation, editing, and synthesis of time-based audio waveforms. While seewave serves as our cornerstone, we also make reference to other valuable packages, such as <code>tuneR</code>, <code>soundgen</code>, and <code>phonTools</code>, for their specialized functionalities as needed.</p>
-</section>
 <section id="data-acquisition-and-processing" class="level2">
 <h2 class="anchored" data-anchor-id="data-acquisition-and-processing">Data Acquisition and Processing</h2>
 <section id="reading-sound-files" class="level3">
@@ -756,6 +757,7 @@ Wave Object
 </div>
 
 
+</section>
 </section>
 </section>
 
