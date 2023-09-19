@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The voice Analytics Hub – basic-theory</title>
+<title>The Voice Analytics Hub – basic-theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">The voice Analytics Hub</a> 
+      <a href="./">The Voice Analytics Hub</a> 
         <div class="sidebar-tools-main">
     <a href="https://www.ibt.unisg.ch/" title="" class="sidebar-tool px-1"><i class="bi bi-globe2"></i></a>
   <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basic-tutorial.html" class="sidebar-item-text sidebar-link">Voice Analytics with R in Action: A basic Example</a>
+  <a href="./basic-tutorial.html" class="sidebar-item-text sidebar-link">Voice Analytics in action</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -151,26 +151,20 @@ ul.task-list li input[type="checkbox"] {
 <section id="unveiling-the-world-of-voice-analytics" class="level1">
 <h1><strong>Unveiling the World of Voice Analytics</strong></h1>
 <p>Voice analytics is a multidisciplinary exploration of human speech, seamlessly integrating phonetics, acoustics, and cognitive psychology. This cutting-edge field unravels the intricacies of speech formation, transmission, and perception, offering profound insights into human communication.</p>
-<p>Before diving into the world of voice and audio analytics, it’s essential to grasp the fundamental principles of acoustics. While acoustics is a vast field, we’ll cover some key concepts to provide a foundational understanding of this fascinating domain. These insights will not only enhance your comprehension of voice analytics but also empower you to better interpret your analysis results.</p>
-<section id="the-basics-of-sound" class="level2">
-<h2 class="anchored" data-anchor-id="the-basics-of-sound">The Basics of Sound</h2>
-<section id="sound-as-wave-motion" class="level3">
-<h3 class="anchored" data-anchor-id="sound-as-wave-motion"><strong>Sound as Wave Motion</strong></h3>
-<p>Sound, at its core, is a wave in motion—a concept that traces its roots to the study of water waves. These sound waves travel through various elastic media, including air, steel, and water, inducing changes in pressure and motion. Elastic media have the remarkable ability to reshape themselves when subjected to external forces.</p>
+<p>Before diving into the world of voice analytics, it’s essential to grasp the fundamental principles of acoustics. While acoustics is a vast field, we’ll cover some key concepts to provide a foundational understanding of this fascinating domain. These insights will not only enhance your comprehension of voice analytics but also empower you to better interpret your analysis results.</p>
+<section id="fundamental-principles-of-acoustics" class="level2">
+<h2 class="anchored" data-anchor-id="fundamental-principles-of-acoustics">Fundamental Principles of Acoustics</h2>
+<section id="sound-as-wave-in-motion" class="level3">
+<h3 class="anchored" data-anchor-id="sound-as-wave-in-motion"><strong>Sound as Wave in Motion</strong></h3>
+<p>Sound, at its core, is a wave in motion. These sound waves travel through various elastic media, including air, steel, and water, inducing changes in pressure and motion. Elastic media have the remarkable ability to reshape themselves when subjected to external forces.</p>
 </section>
-<section id="types-of-waves" class="level3">
-<h3 class="anchored" data-anchor-id="types-of-waves"><strong>Types of Waves</strong></h3>
-<p>Waves can be categorized based on the direction of their movement, resulting in three primary types: transverse, longitudinal, and surface waves.</p>
-<ul>
-<li><p><strong>Transverse Waves:</strong> In transverse waves, the particles in the medium move in a direction perpendicular to the wave’s propagation direction.</p></li>
-<li><p><strong>Longitudinal Waves:</strong> Longitudinal waves involve particles moving parallel to the direction of the wave’s travel.</p></li>
-<li><p><strong>Surface Waves:</strong> These waves exhibit circular particle motion, typically occurring at the interface between two media.</p></li>
-</ul>
-<p>In the ideal fluid medium, such as air and other gases, sound is transmitted as longitudinal waves. However, in solid mediums like steel, sound can travel as both longitudinal and transverse waves.</p>
+<section id="sound-as-a-longitudinal-wave" class="level3">
+<h3 class="anchored" data-anchor-id="sound-as-a-longitudinal-wave"><strong>Sound as a longitudinal Wave</strong></h3>
+<p>Waves can be classified based on the orientation of their motion, giving rise to three fundamental types: transverse, longitudinal, and surface waves. In the case of an ideal fluid medium like air and other gases, sound propagates as longitudinal waves. These are waves in which particles oscillate parallel to the direction of the wave’s propagation.</p>
 </section>
 <section id="complex-periodic-sounds" class="level3">
 <h3 class="anchored" data-anchor-id="complex-periodic-sounds"><strong>Complex Periodic Sounds</strong></h3>
-<p>Voice and musical instruments produce complex periodic sounds, characterized by two key attributes: periodicity and complexity. Periodicity refers to the regular repetition of sound patterns, while complexity indicates the presence of multiple signal components, known as harmonic frequencies. In voice and music, the fundamental frequency (F0) plays a pivotal role, defining the pitch of a sound. Pitch is the perceptual correlate of the acoustic waveform’s periodicity, and it carries tonal and rhythmic information in speech. F0 is crucial for emphasizing linguistic goals in speech, impacting gender perception, and conveying emotions.</p>
+<p>The human voice exhibits two distinctive features: periodicity, which involves the consistent repetition of sound patterns, and complexity, marked by the presence of numerous signal components known as harmonic frequencies. Periodicity pertains to the regular recurrence of sound patterns, while complexity highlights the existence of these multiple harmonic frequencies.</p>
 </section>
 <section id="harmonics-and-frequency" class="level3">
 <h3 class="anchored" data-anchor-id="harmonics-and-frequency"><strong>Harmonics and Frequency</strong></h3>
@@ -180,6 +174,12 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="delving-into-the-mechanics-of-human-speech">Delving into the Mechanics of Human Speech</h3>
 <p>As previously said, voice is nothing else than a complex periodic sound. However, it involves a complex series of events. Imagine uttering a simple greeting like “Hello” to a friend. To do so, your brain initiates the release of air from your lungs, causing your vocal folds to vibrate. The distinctive sound of your “Hello” is a product of the precise configuration of your articulatory organs, including your teeth, tongue, oral and nasal cavities. These unique vocal signatures are influenced by factors such as gender and body size.</p>
 <p>For instance, women typically have higher-pitched voices due to shorter vocal fold lengths, while larger individuals may possess lower-pitched voices due to longer vocal tracts. These vocal variations carry evolutionary implications, shaping perceptions of attractiveness, dominance, and social status.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/Theory/production-to-transmission-process.JPG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">From Speech Production and Soundwave Transmission to Perception. Source: <a href="https://www.sciencedirect.com/science/article/pii/S0148296320306044#b0245">Voice analytics in business research</a></figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="recording-sound-waves" class="level3">
 <h3 class="anchored" data-anchor-id="recording-sound-waves"><strong>Recording Sound Waves</strong></h3>
@@ -191,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="signal-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="signal-analysis"><strong>Signal Analysis</strong></h3>
-<p>Signals are symbolic or numerical values that appear in a specific order. Signal properties can be measured in different dimensions, and that’s where voice analytics takes place.</p>
+<p>Signals are essentially sets of meaningful values arranged in a particular sequence. These values can be assessed from various perspectives, and this is where voice analytics comes into play.</p>
 </section>
 <section id="the-four-dimensional-framework-of-speech" class="level3">
 <h3 class="anchored" data-anchor-id="the-four-dimensional-framework-of-speech"><strong>The Four-Dimensional Framework of Speech</strong></h3>
@@ -212,6 +212,108 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="spectrum-the-art-of-vocal-patterns"><strong>Spectrum:</strong> The Art of Vocal Patterns</h4>
 <p>The fourth dimension delves into the perturbations within a soundwave. These perturbations are quantifiable through spectral features that gauge the degree of irregularity or periodicity in a soundwave, essentially measuring “vocal instability.” Noteworthy spectral features include shimmer (which quantifies variations in loudness), jitter (which assesses pitch fluctuations), and Harmonics-to-Noise Ratio (HNR, indicating additive noise in a signal). Once again, these measures correlate with various perceived personality traits and emotional states. For example, increased shimmer and jitter are linked to heightened stress or anger.</p>
 </section>
+</section>
+<section id="a-four-dimensional-conceptual-framework-of-speech-linking-vocal-features-to-speaker-states-and-traits" class="level3">
+<h3 class="anchored" data-anchor-id="a-four-dimensional-conceptual-framework-of-speech-linking-vocal-features-to-speaker-states-and-traits">A Four-Dimensional Conceptual Framework of Speech: Linking Vocal Features to Speaker States and Traits</h3>
+<div class="table-wrapper">
+<table class="table">
+<thead>
+<tr class="header">
+<th>SOUNDWAVE DOMAIN</th>
+<th>PRIMARY VOCAL FEATURES (EXAMPLE METRIC)</th>
+<th>LISTENER PERCEPTION</th>
+<th>INFERRED STATES AND TRAITS BASED ON EXPRESSED SPEECH</th>
+<th>SELECTED RESEARCH</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Time</strong></td>
+<td>Duration (Milli-/Seconds)</td>
+<td>Duration of an Utterance</td>
+<td>Anger↑, Fear↑, Sorrow↑</td>
+<td><a href="https://doi.org/10.1121/1.1913238">Williams &amp; Stevens, 1972</a></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Speech and Articulation Rate (Words per Second)</td>
+<td>Velocity of Speech</td>
+<td>Anger↑, Competence ↑, Contemplation↓, Dominance↓, Enthusiasm↑, Extraversion↑, Fear↑, Happiness↑, Persuasiveness↑, Sadness↓, Stress↑, Tenderness↓</td>
+<td><a href="http://www.ncbi.nlm.nih.gov/pubmed/8117221">Brenner, Doherty, &amp; Shipp, 1994</a>; <a href="https://scholar.google.com/scholar?q=Dasgupta%2C%20P.%20B.%20(2017).%20Detection%20and%20analysis%20of%20human%20emotions%20through%20voice%20and%20speech%20pattern%20processing.%20International%20Journal%20of%20Computer%20Trends%20and%20Technology%2C%2052(1)%2C%201%E2%80%933.%2010.14445%2F22312803%2FIJCTT-V52P101.">Dasgupta, 2017</a>; <a href="https://doi.org/10.1037/0033-2909.129.5.770">Juslin &amp; Laukka, 2003</a>; <a href="https://scholar.google.com/scholar_lookup?title=Listener%20perception%20of%20time-compressed%20spokespersons&amp;publication_year=1982&amp;author=J.%20MacLachlan">MacLachlan, 1982</a>; <a href="https://doi.org/10.1037/0022-3514.34.4.615">Miller et al., 1976</a>; <a href="https://doi.org/10.1109/ACII.2015.7344614">Mohammadi &amp; Vinciarelli, 2015</a>; <a href="https://scholar.google.com/scholar_lookup?title=Social%20markers%20in%20speech&amp;publication_year=1979&amp;author=K.R.%20Scherer&amp;author=H.%20Giles">Scherer &amp; Giles, 1979</a>; <a href="https://doi.org/10.1093/hcr/26.1.148">Tusing &amp; Dillard, 2000;</a> <a href="https://doi.org/10.1121/1.1913238">Williams &amp; Stevens, 1972</a></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Voice breaks (Percentage Unvoiced Frames)</td>
+<td>Number and Duration of Pauses</td>
+<td>Competence↓, Contemplation↑, Extraversion↓</td>
+<td><a href="https://scholar.google.com/scholar?q=Dasgupta%2C%20P.%20B.%20(2017).%20Detection%20and%20analysis%20of%20human%20emotions%20through%20voice%20and%20speech%20pattern%20processing.%20International%20Journal%20of%20Computer%20Trends%20and%20Technology%2C%2052(1)%2C%201%E2%80%933.%2010.14445%2F22312803%2FIJCTT-V52P101.">Dasgupta, 2017</a>; <a href="https://doi.org/10.1080/03637755809375240">Mallory &amp; Miller, 1958</a>; <a href="https://doi.org/10.1109/ACII.2015.7344614">Mohammadi &amp; Vinciarelli, 2015</a>; <a href="https://scholar.google.com/scholar_lookup?title=Social%20markers%20in%20speech&amp;publication_year=1979&amp;author=K.R.%20Scherer&amp;author=H.%20Giles">Scherer &amp; Giles, 1979</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Amplitude</strong></td>
+<td>Intensity / Power (Sone)</td>
+<td>Loudness of Speech</td>
+<td>Aggression↑, Anger↑, Annoyance↑, Dominance↑, Extraversion↑, Fear↓, Happiness↑, Tenderness↓, Sadness↓, Shyness↓, Stress↑</td>
+<td><a href="http://www.isca-speech.org/archive_open/speech_emotion/spem_110.html">Abelin &amp; Allwood, 2000</a>; <a href="http://www.ncbi.nlm.nih.gov/pubmed/8117221">Brenner et al., 1994</a>; J<a href="https://scholar.google.com/scholar_lookup?title=The%20effects%20of%20emotions%20on%20voice%20quality&amp;publication_year=1999&amp;author=T.%20Johnstone&amp;author=K.R.%20Scherer">ohnstone &amp; Scherer, 1999</a>; <a href="https://doi.org/10.1037/0033-2909.129.5.770">Juslin &amp; Laukka, 2003</a>; <a href="https://doi.org/10.1080/03637755809375240">Mallory &amp; Miller, 1958</a>; <a href="https://doi.org/10.1016/S0167-6393(02)00084-5">Scherer, 2003</a>; <a href="https://scholar.google.com/scholar_lookup?title=Social%20markers%20in%20speech&amp;publication_year=1979&amp;author=K.R.%20Scherer&amp;author=H.%20Giles">Scherer &amp; Giles, 1979</a>; <a href="https://doi.org/10.1093/hcr/26.1.148">Tusing &amp; Dillard, 2000</a></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Variability of Intensity / Power (Sone Variance)</td>
+<td>Loudness Variability</td>
+<td>Anger↑, Dominance↑, Fear↑, Happiness↑, Sadness↓, Tenderness↓</td>
+<td><a href="https://doi.org/10.1037/0033-2909.129.5.770">Juslin &amp; Laukka, 2003</a>; <a href="https://doi.org/10.1093/hcr/26.1.148">Tusing &amp; Dillard, 2000</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Frequency</strong></td>
+<td>Fundamental Frequency (Hertz)</td>
+<td>Pitch</td>
+<td>Anger↑, Competence↓, Confidence↓, Empathy↓, Extraversion↑, Fear↑, Happiness↑, Nervousness↑, Persuasiveness↓, Sadness↓, Stress↑, Tenderness↓, Trustworthiness↓</td>
+<td><a href="https://doi.org/10.1037/0022-3514.37.5.715">Apple et al., 1979</a>; <a href="http://www.ncbi.nlm.nih.gov/pubmed/8117221">Brenner et al., 1994</a>; <a href="https://doi.org/10.1177/0146167218787805">Guyer et al., 2019</a>; <a href="https://doi.org/10.1037/0033-2909.129.5.770">Juslin &amp; Laukka, 2003</a>; <a href="https://doi.org/10.3758/s13423-016-1146-y">Oleszkiewicz et al., 2017</a>; <a href="https://scholar.google.com/scholar_lookup?title=Social%20markers%20in%20speech&amp;publication_year=1979&amp;author=K.R.%20Scherer&amp;author=H.%20Giles">Scherer &amp; Giles, 1979</a>; <a href="https://doi.org/10.1121/1.1913238">Williams &amp; Stevens, 1972</a></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Variability of Fundamental Frequency (Hertz Variance)</td>
+<td>Pitch Variability</td>
+<td>Anger↑, Extraversion↑, Happiness↑, Sadness↓, Shyness↓, Sociability↑, Tenderness↓</td>
+<td><a href="http://www.isca-speech.org/archive_open/speech_emotion/spem_110.html">Abelin &amp; Allwood, 2000</a>; <a href="https://doi.org/10.1111/j.1468-2958.1990.tb00229.x">Burgoon, Birk, &amp; Pfau, 1990</a>; <a href="https://doi.org/10.1037/0033-2909.129.5.770">Juslin &amp; Laukka, 2003</a>; <a href="https://doi.org/10.1080/03637758609376141">Ray, 1986</a>; <a href="https://scholar.google.com/scholar_lookup?title=Social%20markers%20in%20speech&amp;publication_year=1979&amp;author=K.R.%20Scherer&amp;author=H.%20Giles">Scherer &amp; Giles, 1979</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Spectral</strong></td>
+<td>Vocal Shimmer (cycle to cycle deviation from mean amplitude)</td>
+<td>Loudness Perturbations</td>
+<td>Anger↑, Confidence↑, Joy↓, Stress↑</td>
+<td><a href="https://doi.org/10.1109/ICCSP.2016.7754275">Jacob, 2016; Jiang &amp; Pell, 2017</a>; <a href="https://doi.org/10.1109/ICASSP.2007.367261">Li et al., 2007</a></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Vocal Jitter (mean absolute difference between consecutive μs periods)</td>
+<td>Pitch Perturbations</td>
+<td>Anger↑, Annoyance↑, Happiness↑, Sadness↓, Stress↑</td>
+<td><a href="https://scholar.google.com/scholar_lookup?title=The%20effects%20of%20emotions%20on%20voice%20quality&amp;publication_year=1999&amp;author=T.%20Johnstone&amp;author=K.R.%20Scherer">Johnstone &amp; Scherer, 1999</a>; <a href="https://doi.org/10.1037/0033-2909.129.5.770">Juslin &amp; Laukka, 2003</a>; <a href="https://doi.org/10.1109/ICASSP.2007.367261">Li et al., 2007</a></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>HNR (additive noise in signal in dB)</td>
+<td>Voice Quality</td>
+<td>Confidence↑, Happiness↑, Interest↑, Lust↓, Pleasure↑</td>
+<td><a href="https://doi.org/10.1016/j.specom.2017.01.011">Jiang &amp; Pell, 2017</a>; <a href="https://doi.org/10.3758/s13423-019-01701-x">Kamiloglu ˘ et al., 2020</a></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Vocal Entropy (Shannon evenness of frequency spectrum)</td>
+<td>Diversity of Vocal Transitions</td>
+<td>Low mood↑</td>
+<td><a href="https://doi.org/10.1109/SITIS.2016.113">Yingthawornsuk, 2016</a></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </section>
 <section id="r-for-voice-analytics" class="level2">

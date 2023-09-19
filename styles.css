@@ -3,3 +3,8 @@
 .quarto-dark img{
   filter: invert(86.5%);
 }
+
+.table-wrapper {
+  height: 550px;
+  overflow-y: scroll;
+}
