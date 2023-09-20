@@ -342,23 +342,23 @@ Wave Object
 <li><p><code>zapsilw( )</code>: To eliminate all unvoiced frames from a sound file, the <code>zapsilw()</code> function comes into play. Users can tailor this operation by setting the ‘threshold’ argument, which measures the amplitude threshold in percent distinguishing silence from signal. Additionally, the <code>zapsilw()</code> function offers the default feature of generating oscillograms for both the original sound file and the modified version post unvoiced frame removal, providing visual insight into the process.</p></li>
 </ol>
 <p>These functions empower users to efficiently manipulate sound files, ensuring they are tailored to meet the specific requirements of their analyses. To illustrate their practical utility, let’s delve into some illustrative examples.</p>
-<p>As an instance, consider the application of the <strong><code>extractWave()</code></strong> function to pinpoint the initial 700 milliseconds of the soundwave residing in <code>cmd1</code>.</p>
+<p>As an instance, consider the application of the <code>extractWave()</code> function to pinpoint the initial 700 milliseconds of the soundwave residing in <code>cmd1</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Extract first 700ms</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>cmd1.xtr <span class="ot">&lt;-</span> <span class="fu">extractWave</span>(cmd1, <span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="fl">0.7</span>, <span class="at">xunit =</span> <span class="st">"time"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Here, the <code>from</code> and <code>to</code> arguments are employed to specify the time range of interest. In this case, we isolate the first 700 milliseconds, facilitating a focused analysis.</p>
-<p>Alternatively, instead of extracting this segment, we can achieve its removal using the <strong><code>deletew()</code></strong> function:</p>
+<p>Alternatively, instead of extracting this segment, we can achieve its removal using the <code>deletew()</code> function:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Delete first 700ms</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>cmd1.rem <span class="ot">&lt;-</span> <span class="fu">deletew</span>(cmd1, <span class="at">from=</span><span class="dv">0</span>, <span class="at">to=</span><span class="fl">0.7</span>, <span class="at">output=</span><span class="st">"Wave"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Continuing with our exploration of sound manipulation, we can also replicate the first 700 milliseconds threefold with the <strong><code>repw()</code></strong> function:</p>
+<p>Continuing with our exploration of sound manipulation, we can also replicate the first 700 milliseconds threefold with the <code>repw()</code> function:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Repeat first 700ms three times</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>cmd1.rep3 <span class="ot">&lt;-</span> <span class="fu">repw</span>(cmd1, <span class="at">f=</span>cmd1<span class="sc">@</span>samp.rate, <span class="at">times=</span><span class="dv">3</span>, <span class="at">output=</span><span class="st">"Wave"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>To refine the audio data further, we may opt to remove solely the unvoiced segments at the beginning and end using the <strong><code>noSilence()</code></strong> function:</p>
+<p>To refine the audio data further, we may opt to remove solely the unvoiced segments at the beginning and end using the <code>noSilence()</code> function:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove only unvoiced start and ending</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>cmd1.cut <span class="ot">&lt;-</span> <span class="fu">noSilence</span>(cmd1)</span>
@@ -442,8 +442,8 @@ Wave Object
 <section id="visualizing-sound" class="level2">
 <h2 class="anchored" data-anchor-id="visualizing-sound">Visualizing sound</h2>
 <p>Having covered the processes of reading, editing, and saving sound objects, we now embark on the journey of visualizing the essential attributes of a sound wave. Visualization entails the transformation of a sound wave into a graphical or statistical representation. The primary means of depicting a sound wave typically involve showcasing its (1) amplitude, (2) frequency, and (3) a blend of amplitude and frequency variations over time. Two common visualizations employed for this purpose are oscillograms, which capture amplitude, and spectrograms, which provide insights into frequency and the interplay between frequency and amplitude over time.</p>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
+<section id="visualizing-amplitude" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-amplitude">Visualizing Amplitude</h3>
 <p>Oscillograms offer a visual representation of the instantaneous amplitude of a soundwave plotted against time. They are often referred to as waveforms, as they graphically depict the variations within the sound wave itself. Oscillograms serve as valuable tools for discerning potential changes in loudness over time within a soundwave. In R, you can create oscillograms using the <code>oscillo()</code> function from the seewave package. This function requires just one argument, the sound object. Moreover, <code>oscillo()</code> provides the flexibility to customize various visual aspects, such as the title (using the <code>title</code> argument), label color (via the <code>collab</code> argument), and wave color (by setting the ‘colwave’ argument). Additionally, you can specify the ‘from’ and ‘to’ arguments, similar to what we did during data processing, to generate an oscillogram for a specific time interval in seconds.</p>
 <p>To gain insights from the oscillograms of the two Alexa commands, we aim to first visualize the entire soundwave and then zoom in to focus solely on the articulation of the wakeword.</p>
 <p>To plot all four graphs within a single plotting region, we partition the plot into four distinct sections using the standard <code>par</code> and <code>mfrow</code> arguments in R. Furthermore, to exclusively display the wakeword, we make use of the <code>from</code> and <code>to</code> arguments within the <code>oscillo()</code> function.</p>
@@ -459,7 +459,7 @@ Wave Object
 </div>
 <p>Upon closer examination, as depicted in <a href="#fig-oscillograms">Figure&nbsp;2</a>, a few notable observations come to light at first glance:</p>
 <ol type="1">
-<li><p>D<strong>ifference in Duration</strong>: It becomes apparent that the second command is slightly longer than the first. Remarkably, both commands share identical content, both stating “Alexa, play by Dana.” A deeper dive into the oscillograms reveals the underlying reason: in the second command, there are longer vocal breaks, representing the time gaps between each spoken word.</p></li>
+<li><p><strong>Difference in Duration</strong>: It becomes apparent that the second command is slightly longer than the first. Remarkably, both commands share identical content, both stating “Alexa, play by Dana.” A deeper dive into the oscillograms reveals the underlying reason: in the second command, there are longer vocal breaks, representing the time gaps between each spoken word.</p></li>
 <li><p><strong>Emphasis on Individual Words</strong>: Notably, there are striking variations in the emphasis placed on individual words when issuing the two commands. For instance, in the lower panel of <a href="#fig-oscillograms">Figure&nbsp;2</a>, we can discern the pronounced differences in overall amplitudes. Particularly, the word “Alexa” in the second command exhibits significantly greater amplitude compared to its counterpart in the first command. This observation suggests that, without needing to listen to the voice files or comprehend the spoken content, we can already deduce that the second command tends to be louder overall than the first. Such a distinction may hint at potential heightened emotions such as anger, stress, or irritability on the part of the speaker.</p></li>
 </ol>
 <p>These initial insights gleaned from the oscillograms provide valuable cues for further analysis and interpretation of the audio data.</p>
