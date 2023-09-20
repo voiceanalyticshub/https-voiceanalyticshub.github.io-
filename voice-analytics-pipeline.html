@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Voice Analytics Hub – basic-resources</title>
+<title>The Voice Analytics Hub - The Voice Analytics Pipeline</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">(Untitled)</h1>
+      <h1 class="quarto-secondary-nav-title">The Voice Analytics Pipeline</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -113,12 +113,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basic-theory.html" class="sidebar-item-text sidebar-link">Theoretical background</a>
+  <a href="./basic-theory.html" class="sidebar-item-text sidebar-link">Theoretical Foundations</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./voice-analytics-pipeline.html" class="sidebar-item-text sidebar-link">The Voice Analytics Pipeline</a>
+  <a href="./voice-analytics-pipeline.html" class="sidebar-item-text sidebar-link active">The Voice Analytics Pipeline</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basic-resources.html" class="sidebar-item-text sidebar-link active">Resources to learn more</a>
+  <a href="./basic-resources.html" class="sidebar-item-text sidebar-link">Resources to learn more</a>
   </div>
 </li>
       </ul>
@@ -151,40 +151,71 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">The Voice Analytics Pipeline</h1>
+</div>
 
 
-<section id="dive-deeper-into-voice-analytics-your-comprehensive-resource-hub" class="level1">
-<h1><strong>Dive Deeper into Voice Analytics: Your Comprehensive Resource Hub</strong></h1>
-<p>Welcome to our curated collection of resources for those interested in diving deeper into the world of voice analytics. Whether you’re a beginner looking to understand the basics or an experienced analyst seeking advanced knowledge, these resources will help you explore the fascinating field of voice analytics.</p>
-<section id="voice-analytics" class="level2">
-<h2 class="anchored" data-anchor-id="voice-analytics">Voice Analytics</h2>
-<section id="recommended-r-packages" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-r-packages">Recommended R packages</h3>
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>In the world of voice analytics, where the intricacies of human communication are decoded, there exists a well-defined journey—a pipeline, if you will—that unfolds in a sequence of meticulously orchestrated steps. These steps collectively constitute the Voice Analytics Pipeline, a fundamental framework that guides researchers through the intricate process of deciphering the language of sound. Within this pipeline, we navigate from the raw acoustic signals to profound insights into vocal interactions, human emotions, and psychological states.</p>
+<p>Our comprehensive voice analytics pipeline takes us on a voyage, starting from the raw sound data and leading us to enlightening discoveries. It empowers us to delve into the subtle intricacies of human communication and emotional expression. Below, you’ll find a visual representation that provides a bird’s-eye view of the essential stages within the voice analytics process. Following that, we offer detailed descriptions of each of these critical steps, guiding you through the journey of understanding the rich tapestry of human voices and their meanings.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/voice-pipeline/voice-analytics-pipeline.jpg" class="img-fluid figure-img" alt="Voice Analytics Production Pipeline. Source: Voice analytics in business research"></p>
+<p></p><figcaption class="figure-caption">Voice Analytics Production Pipeline. Source: <a href="https://www.sciencedirect.com/science/article/pii/S0148296320306044">Voice analytics in business research</a></figcaption><p></p>
+</figure>
+</div>
+<section id="data-acquisition" class="level2">
+<h2 class="anchored" data-anchor-id="data-acquisition"><strong>1. Data Acquisition</strong></h2>
+<p>The voice analytics journey starts with the acquisition of the required data. This initial phase carries profound significance as it essentially lays the cornerstone upon which the subsequent analytical processes will rest. To embark on this endeavor effectively, it is imperative to meticulously articulate and define the research problem you intend to address. This initial definition is the compass that guides the nature and source of the requisite data.</p>
+<p>Once we haveve pinpointed our research goal, it is time to decide where to gather our sound data from. We have some options here. We can venture into the vast landscape of the internet to find audio clips by scraping them, or we can set up experiments to generate our own audio data.</p>
+<p>Should you choose the experimental route, you’ll find yourself at a crossroads once again, with some interesting decisions to make. You can opt for a crowdsourced approach, leveraging platforms such as Prolific to enlist the participation of individuals from diverse backgrounds. Alternatively, you can adopt a more traditional experimental approach, where you physically record participants in a controlled environment.</p>
+<p>However, it’s imperative to bear in mind that each of these approaches carries its own set of implications, particularly concerning data representativeness and quality. The choices you make in this regard can have far-reaching consequences for the validity and reliability of your research findings.</p>
+</section>
+<section id="processing-editing" class="level2">
+<h2 class="anchored" data-anchor-id="processing-editing"><strong>2. Processing &amp; Editing</strong></h2>
+<p>Once collected, the data undergoes meticulous editing and processing. This critical step serves to refine the dataset and prepare it for subsequent analysis. During this phase:</p>
 <ul>
-<li><p><strong>voiceR</strong>: simplifies and largely automates practical voice analytics for social science research <a href="https://cran.r-project.org/package=voiceR">[link]</a></p></li>
-<li><p><strong>seewave</strong>: functions for analysing, manipulating, displaying, editing and synthesizing time waves (particularly sound). <a href="https://cran.r-project.org/web/packages/seewave/index.html">[link]</a></p></li>
-<li><p><strong>tuneR</strong>: analyze music and speech, extract features like MFCCs, handle wave files and their representation in various ways, read mp3, read midi, perform steps of a transcription, etc. <a href="https://cran.r-project.org/package=tuneR">[link]</a></p></li>
-<li><p><strong>phonTools</strong>: tools for the organization, display, and analysis of the sorts of data frequently encountered in phonetics research and experimentation. <a href="https://cran.r-project.org/web/packages/phonTools/index.html">[link]</a></p></li>
-<li><p><strong>soundgen</strong>: open-source toolbox for voice synthesis, manipulation, and analysis. <a href="https://cran.r-project.org/package=soundgen">[link]</a></p></li>
+<li><p>Irrelevant sections, such as background noise or extended periods of silence, are carefully removed. This meticulous cleaning ensures that the ensuing analysis is centered on the most pertinent audio segments.</p></li>
+<li><p>Researchers may employ techniques for noise reduction and enhancement to improve the overall quality of the audio data. This is particularly important when dealing with recordings of varying audio quality.</p></li>
+<li><p>Specific segments of interest can be selected, allowing for a more focused examination of vocal interactions. This targeted approach is especially valuable when investigating particular aspects of communication.</p></li>
 </ul>
+<p>By diligently executing these preprocessing steps, researchers can ensure that their audio data is ready for in-depth analysis, setting the stage for robust and insightful findings in the field of voice analytics.</p>
 </section>
-<section id="basics" class="level3">
-<h3 class="anchored" data-anchor-id="basics">Basics</h3>
-<ul>
-<li>Hildebrand, C., Efthymiou, F., Busquet, F., Hampton, W. H., Hoffman, D. L., &amp; Novak, T. P. (2020). Voice analytics in business research: Conceptual foundations, acoustic feature extraction, and applications. <em>Journal of Business Research</em>, <em>121</em>, 364-374. <a href="https://www.sciencedirect.com/science/article/pii/S0148296320306044">[link]</a></li>
-</ul>
+<section id="visualizing-sound" class="level2">
+<h2 class="anchored" data-anchor-id="visualizing-sound"><strong>3. Visualizing Sound</strong></h2>
+<p>Delving into the depths of sound data requires more than just hearing; an initial step to achieve so is the transformation of the raw soundwave data into visually accessible representations. This transformative process unveils hidden facets of vocal interactions, bridging the chasm that separates raw audio from meaningful analysis. Drawing inspiration from the principles of data visualization, this pivotal step serves as the linchpin in uncovering intricate patterns, subtle nuances, and intriguing anomalies concealed within the rich tapestry of audio data.</p>
+<p><strong>3.1 Amplitude Visualization</strong></p>
+<p>Amplitude, a fundamental characteristic of sound, is often a primary focus in audio analysis. Visualizations like oscillograms are employed to represent amplitude variations over time. This graphical representation offers a visual insight into loudness changes throughout the audio recording. Researchers can use oscillograms to identify shifts in volume and intensity, aiding in the interpretation of emotional tones or emphasis in spoken words.</p>
+<p><strong>3.2 Frequency Analysis</strong></p>
+<p>Frequency analysis is another pivotal aspect of sound data visualization. It involves the exploration of pitch and tonal variations within the audio. While the auditory perception of pitch is inherent, visualizing these variations can provide additional context. Graphs displaying frequency changes over time offer researchers a visual representation of how vocal characteristics evolve throughout an interaction. This can be instrumental in discerning shifts in conversation dynamics or identifying unique speech patterns.</p>
+<p><strong>3.3 Multidimensional Representations</strong></p>
+<p>Spectrograms are a prime example of multidimensional representations used in voice analytics. They go beyond traditional amplitude and frequency graphs by offering a comprehensive view of audio data. Spectrograms display time on the x-axis, frequency on the y-axis, and variations in amplitude through color gradients. This multidimensional approach enables researchers to pinpoint specific moments of interest within an audio recording. It aids in the detection of simultaneous speech patterns, background noises, or other acoustic phenomena that may impact the analysis.</p>
+<p>These visualizations not only enhance our comprehension of sound data but also provide a foundation for subsequent analysis. By converting raw audio into graphical forms, researchers can uncover hidden insights, patterns, and trends that might otherwise remain concealed. This data visualization process stands as a powerful tool in the hands of researchers, facilitating a deeper understanding of vocal interactions in the context of voice analytics.</p>
 </section>
-<section id="intermediate" class="level3">
-<h3 class="anchored" data-anchor-id="intermediate">Intermediate</h3>
+<section id="extracting-and-analyzing-vocal-features" class="level2">
+<h2 class="anchored" data-anchor-id="extracting-and-analyzing-vocal-features"><strong>4. Extracting and Analyzing Vocal Features</strong></h2>
+<p>Extracting key vocal features is central to the voice analytics process. These features span multiple dimensions of speech and include:</p>
 <ul>
-<li><p>Laver, J. (1991). <em>The Gift of Speech: Papers in the Analysis of Speech and Voice</em>.</p>
-<p><br>
-</p></li>
+<li><p><strong>Duration</strong> (time domain): Measuring the length of sound utterances in seconds or milliseconds.</p></li>
+<li><p><strong>Loudness</strong> (amplitude domain): Quantifying the power or loudness of speech, often using metrics like ‘sone.’</p></li>
+<li><p><strong>Pitch and Variability</strong> (frequency domain): Analyzing the fundamental frequency of a speaker’s voice and its variability over time.</p></li>
+<li><p><strong>Spectral Qualities</strong> (spectral domain): Assessing the perturbance or periodicity of soundwaves, which includes features like vocal jitter, shimmer, entropy, and harmonicity.</p></li>
 </ul>
+<p>These extracted vocal features serve as essential building blocks for subsequent analysis, allowing researchers to delve deeper into the nuances of vocal communication.</p>
+<p>The final stage involves a systematic analysis of the extracted vocal features. This examination spans across different dimensions, including time, amplitude, frequency, and the spectral domain. Analysts assess changes in loudness, speech duration, pitch variations, and spectral characteristics. By interpreting these changes, researchers can unravel valuable insights into the emotional and psychological states of speakers during their interactions. For instance, increased loudness or pitch variability may indicate heightened emotions such as anger or frustration, while spectral qualities can reveal further nuances in the speaker’s emotional state.</p>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
