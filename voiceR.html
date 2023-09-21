@@ -215,23 +215,6 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="using-the-null-placeholder"><strong>Using the Null Placeholder</strong></h3>
 <p>If there are parts of the file name that are not any of the required components, you can use the <code>Null</code> placeholder to avoid them. For example, if you have additional information in the file name that does not belong to any of the categories that voiceR processes, you can use the <code>Null</code> placeholder to ignore that information.</p>
 <p>For example, imagine you have a file named <code>Audio_Participant345_Happy.wav</code>. The <code>Audio</code> component of the file name is not required, so you could define the following pattern: <code>Null_ID_Condition</code>. This file name would still be valid, and voiceR would ignore the first component given that we used the <code>Null</code> placeholder.</p>
-</section>
-<section id="tips-for-naming-your-audio-files" class="level3">
-<h3 class="anchored" data-anchor-id="tips-for-naming-your-audio-files"><strong>Tips for Naming Your Audio Files</strong></h3>
-<ul>
-<li><p>Use descriptive and informative names.</p></li>
-<li><p>Avoid using spaces in your file names. Use underscores instead.</p></li>
-<li><p>Use short and concise names.</p></li>
-<li><p>Avoid using special characters in your file names.</p></li>
-</ul>
-<p>By following these tips, you can ensure that your audio files are named correctly and that voiceR can easily process them.</p>
-<p><strong>Additional Notes</strong></p>
-<ul>
-<li><p>The <code>ID</code> component is the only required component.</p></li>
-<li><p>The <code>Condition</code> and <code>Dimension</code> components are optional, but they can be useful for organizing and comparing your audio files.</p></li>
-<li><p>You can use the <code>Null</code> placeholder to avoid parts of the file name that are not any of the required components.</p></li>
-<li><p>When naming your audio files, be sure to use descriptive and informative names. Avoid using spaces in your file names, and use underscores instead. Use short and concise names, and avoid using special characters.</p></li>
-</ul>
 <p>The animated figure below demonstrates how the voiceR package uses the name pattern structure to identify the different components.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
