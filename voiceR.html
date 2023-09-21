@@ -174,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="columns">
 <div class="column" style="width:75%;">
-<p>voiceR is an R package that simplifies and largely automates practical voice analytics for social science research. This package offers an accessible and easy-to-use interface, including an interactive Shiny app, that simplifies the processing, extraction, analysis, and reporting of voice recording data in the behavioral and social sciences. The package includes batch processing capabilities to read and analyze multiple voice files in parallel, automates the extraction of key vocal features for further analysis, and automatically generates APA formatted reports for typical between-group comparisons in experimental social science research.</p>
+<p>voiceR is an R package that simplifies and largely automates practical voice analytics for social science research. This package offers an accessible and easy-to-use interface, including an interactive Shiny app, that simplifies the processing, extraction, analysis, and reporting of voice recording data in the behavioral and social sciences. The package includes batch processing capabilities to read and analyze multiple voice files in parallel, automates the extraction of key vocal features for further analysis, and automatically generates APA-formatted reports for typical between-group comparisons in experimental social science research.</p>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:20%;">
@@ -191,17 +191,55 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="installation-made-easy" class="level2">
 <h2 class="anchored" data-anchor-id="installation-made-easy"><strong>Installation Made Easy</strong></h2>
-<p>Getting started with voiceR is a breeze. Simply install the package directly from CRAN using the <strong><code>install.packages("voiceR")</code></strong> command. Once installed, you’re ready to embark on your voice analytics journey with voiceR.</p>
+<p>Getting started with voiceR is easy. Simply install the package directly from CRAN using the following command:</p>
+<p><code>install.packages("voiceR")</code></p>
+<p>Once installed, you’re ready to start using voiceR to analyze your voice data.</p>
 </section>
 <section id="structured-file-naming" class="level2">
 <h2 class="anchored" data-anchor-id="structured-file-naming"><strong>Structured File Naming</strong></h2>
-<p>To ensure seamless processing, voiceR relies on a specific file naming convention. Audio file names should adhere to a consistent format, with components like ID, condition, and dimension separated by designated symbols (mainly non alphanumeric symbols, such as underscore). This structure ensures efficient data management and analysis. While order and presence of components can vary, consistency within a session is crucial for optimal performance.</p>
+<p>voiceR relies on a specific file naming convention to ensure seamless processing of audio files. This convention is comprised of up to three components of metadata about the file, two of which are optional:</p>
+<ul>
+<li><p><strong>ID:</strong> A unique identifier for the speaker or recording.</p></li>
+<li><p><strong>Condition</strong> (optional): The experimental condition or another grouping variable.</p></li>
+<li><p><strong>Dimension</strong> (optional): Additional survey or experiment information, such as additional conditions.</p></li>
+</ul>
+<p>The different file name components should be separated by a non-alphanumeric character, such as an underscore (<code>_</code>).</p>
+<p>voiceR extracts these components to provide additional information about the audios and enable comparisons between groups.</p>
+<p><strong>Order of the components is not important, as long as you identify the correct file name pattern structure.</strong> For example, the following file names are all valid:</p>
+<ul>
+<li><p><code>12345_happy_male.wav</code> (ID_Condition_Dimension)</p></li>
+<li><p><code>123bcf.wav</code> (ID)</p></li>
+<li><p><code>CovidPositive_Patient1.wav</code> (Condition_ID)</p></li>
+</ul>
+<section id="using-the-null-placeholder" class="level3">
+<h3 class="anchored" data-anchor-id="using-the-null-placeholder"><strong>Using the Null Placeholder</strong></h3>
+<p>If there are parts of the file name that are not any of the required components, you can use the <code>Null</code> placeholder to avoid them. For example, if you have additional information in the file name that does not belong to any of the categories that voiceR processes, you can use the <code>Null</code> placeholder to ignore that information.</p>
+<p>For example, imagine you have a file named <code>Audio_Participant345_Happy.wav</code>. The <code>Audio</code> component of the file name is not required, so you could define the following pattern: <code>Null_ID_Condition</code>. This file name would still be valid, and voiceR would ignore the first component given that we used the <code>Null</code> placeholder.</p>
+</section>
+<section id="tips-for-naming-your-audio-files" class="level3">
+<h3 class="anchored" data-anchor-id="tips-for-naming-your-audio-files"><strong>Tips for Naming Your Audio Files</strong></h3>
+<ul>
+<li><p>Use descriptive and informative names.</p></li>
+<li><p>Avoid using spaces in your file names. Use underscores instead.</p></li>
+<li><p>Use short and concise names.</p></li>
+<li><p>Avoid using special characters in your file names.</p></li>
+</ul>
+<p>By following these tips, you can ensure that your audio files are named correctly and that voiceR can easily process them.</p>
+<p><strong>Additional Notes</strong></p>
+<ul>
+<li><p>The <code>ID</code> component is the only required component.</p></li>
+<li><p>The <code>Condition</code> and <code>Dimension</code> components are optional, but they can be useful for organizing and comparing your audio files.</p></li>
+<li><p>You can use the <code>Null</code> placeholder to avoid parts of the file name that are not any of the required components.</p></li>
+<li><p>When naming your audio files, be sure to use descriptive and informative names. Avoid using spaces in your file names, and use underscores instead. Use short and concise names, and avoid using special characters.</p></li>
+</ul>
+<p>The animated figure below demonstrates how the voiceR package uses the name pattern structure to identify the different components.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="data/voiceR/gif/voiceR_file_pattern.gif" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Examples of File Name Patterns</figcaption><p></p>
 </figure>
 </div>
+</section>
 </section>
 <section id="comprehensive-functionality" class="level2">
 <h2 class="anchored" data-anchor-id="comprehensive-functionality"><strong>Comprehensive Functionality</strong></h2>
